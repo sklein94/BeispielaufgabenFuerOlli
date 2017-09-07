@@ -16,5 +16,8 @@ public class Main {
 
         //Falsch ist:
         //ClassWithMethodsWithParameters.saySomeWords(5, "Wie gehts?");
+
+        //Funktioniert nicht, da es außerhalb der Methode ist.
+        //System.out.println(numberOfWords);
     }
 }
