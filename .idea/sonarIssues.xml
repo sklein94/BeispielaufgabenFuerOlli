@@ -18,7 +18,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/Fleisch.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/Fleischfresser.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/GrossesTier.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/Hund.java">
           <value>
             <set />
           </value>
@@ -28,12 +43,72 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/Kuh.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/Main.java">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/Nahrungsaufnahme.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/Pflanzen.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/Pflanzenfresser.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/Tier.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/animals/Hund.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/animals/Kuh.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/classes/GrossesTier.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/classes/KleinesTier.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/classes/Tier.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/interfaces/Fleischfresser.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/interfaces/Nahrungsaufnahme.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/examples/abstractAndInterfaces/interfaces/Pflanzenfresser.java">
           <value>
             <set />
           </value>
@@ -114,6 +189,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/examples/staticOverride/ClassWithStaticMethods.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/examples/staticOverride/Hallo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/examples/staticOverride/HelloSayer.java">
           <value>
             <set />
           </value>

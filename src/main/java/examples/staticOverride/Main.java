@@ -3,22 +3,32 @@ package examples.staticOverride;
 public class Main {
     public static void main(String[] args){
 
-        //Die Statische Methode und die nichtstatische Methode werden aufgerufen.
-        Oberklasse oberklasse = new Oberklasse();
-        oberklasse.nonstaticMethod();
+        //Ein Objekt der Oberklasse wird erstellt.
+        Oberklasse oberklasseObjekt = new Oberklasse();
+
+        /* Die Statische Methode kann sowohl über den Klassennamen als auch über einen Objektnamen aufgerufen werden.
+         * Das Aufrufen über den Objektnamen gilt allerdings als schlechter Programmierstil, da es dann nicht
+         * eindeutig erkennbar ist, dass es sich um eine statische Methode handelt.
+         * Die nichtstatische Methode wird über den Objektnamen aufgerufen.
+         */
+        oberklasseObjekt.nonstaticMethod();
         Oberklasse.staticMethod();
+        oberklasseObjekt.staticMethod();
         System.out.println();
 
 
 
 
 
+        /*
+         * Bei der Unterklasse ist es genau so möglich, wobei sich die Implementierung verändert, da in der Unterklasse
+         * die Methoden Überschrieben/Überlagert wurden.
+         */
+        Unterklasse unterklasse_Objekt = new Unterklasse();
 
-        //Die Unterklasse erbt die nichtstatische Methode von der Oberklasse.
-        Unterklasse unterklasse = new Unterklasse();
-        unterklasse.nonstaticMethod();
-        //Die Unterklasse kann auf die statische Methode der Oberklasse zugreifen.
+        unterklasse_Objekt.nonstaticMethod();
         Unterklasse.staticMethod();
+        unterklasse_Objekt.staticMethod();
         System.out.println();
 
 
@@ -26,6 +36,9 @@ public class Main {
 
 
 
+        /* Die UnterUnterklasse erbt von der Unterklasse, welche von der Oberklasse erbt. Diese überschreibt/überlagert
+         * allerdings keine Methoden.
+         */
         Unterklasse unterUnterklasse = new UnterUnterklasse();
         //Die Unterklasse der Unterklasse erbt die nichtstatische Methode der Unterklasse
         unterUnterklasse.nonstaticMethod();
