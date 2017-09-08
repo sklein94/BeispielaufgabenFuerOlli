@@ -22,7 +22,7 @@ public class Main {
 
         /*
          * Bei der Unterklasse ist es genau so möglich, wobei sich die Implementierung verändert, da in der Unterklasse
-         * die Methoden Überschrieben/Überlagert wurden.
+         * die Methoden überschrieben wurden.
          */
         Unterklasse unterklasse_Objekt = new Unterklasse();
 
@@ -36,46 +36,46 @@ public class Main {
 
 
 
-        /* Die UnterUnterklasse erbt von der Unterklasse, welche von der Oberklasse erbt. Diese überschreibt/überlagert
-         * allerdings keine Methoden.
+        /* Die UnterUnterklasse erbt von der Unterklasse, welche von der Oberklasse erbt. Diese überschreibt
+         * allerdings keine Methoden. Daher behält die Unterklasse alle Implementierungen der Unterklasse.
          */
-        Unterklasse unterUnterklasse = new UnterUnterklasse();
-        //Die Unterklasse der Unterklasse erbt die nichtstatische Methode der Unterklasse
+        UnterUnterklasse unterUnterklasse = new UnterUnterklasse();
         unterUnterklasse.nonstaticMethod();
-        //Die Unterklasse der Unterklasse kann auf die statische Methode der Unterklasse zugreifen.
         UnterUnterklasse.staticMethod();
-        //Die Unterklasse der Unterklasse kann auf die statische Methode der Oberklasse zugreifen.
+        //Diese statische Methode stammt von der Oberklasse und wurde bis zur UnterUnterklasse weiter vererbt.
         UnterUnterklasse.secondStaticMethod();
         System.out.println();
 
 
 
-
-
-        //Polymorphie: Ein Objekt der Unterklasse wird in einer Variable der Oberklasse erzeugt.
-        //Hier zeigt das Programm ein Verhalten, was man auf den ersten Blick nicht erwarten würde.
-        //Das Programm wird, obwohl die Variable ein Objekt vom Typ Unterklasse enthält, die Methoden
-        //von der Oberklasse aufrufen.
-        //Das liegt daran, dass statische Methoden schon zum Kompilierungszeit festliegen.
-        //Hier steht schon fest, welche Implementierung der Methode aufgerufen wird, nämlich die der Oberklasse
-        //Wäre die Methode nicht statisch, würde erst zur Laufzeit entschieden werden, welche der Implementierungen
-        //aufgerufen wird.
-        //Bei statischen Methoden wird anhand des Klassennamens entschieden, welche Implementierung einer Methode
-        //aufgerufen wird, bei nichtstatischen Methoden wird anhand des tatsächlichen Objekttypen entschieden.
-        //
-        //Statische Methoden werden also vererbt, können aber streng genommen nicht überschrieben werden.
-        //Die Unterklasse kann nur auf den statischen Geltungsbereich der Oberklasse zugreifen.
-        //
-        //Man kann zwar eine gleichnamige statische Methode schreiben, welche dann die statische Methode
-        //in der Unterklasse überlagern, also neu implementieren, aber es hat nicht den gleichen Effekt wie das
-        //Überschreiben der Methode.
-        //Die Überschriebene Methode existiert nicht mehr in der neuen Klasse, die überlagerte Methode existiert weiterhin.
-        //Die statische Methode der Oberklasse existiert weiterhin in ihrem Geltungsbereich und es kann über den "vollen Namen"
-        //weiterhin auf sie zugegriffen werden (Klassenname.Methodenname).
-        //Auf die überschriebene Methode kann nur noch über super.Methodenname zugegriffen werden.
+        /*
+         * Polymorphie -> Vielgestaltigkeit -> Das Objekt der Unterklasse ist in einer Variable der Oberklasse gespeichert.
+         * Hier tritt allerdings ein vermeintlich unerwartetes Ergebnis auf. Wird die statische Methode der Unterklasse
+         * in einer Variable vom Typ Oberklasse aufgerufen, so verwendet das Programm die Implementierung der Oberklasse,
+         * obwohl die Unterklasse eine eigene Implementierung besitzt.
+         * Das liegt daran, dass die verwendete Implementierung einer statischen Methode schon zur Compilerzeit feststeht,
+         * bei einer nichtstatischen Methode aber erst zur Laufzeit entschieden wird, wie die genaue Implementierung
+         * einer Methode ist.
+         *
+         * Daher macht der Compiler die Entscheidung, welche der Methoden er aufruft davon abhängig, welchen
+         * Objekttyp die Variable hat, nicht aber welches Objekt tatsächlich innerhalb der Variable gespeichert ist.
+         *
+         * Beim Überschreiben wird eine Methode in einer Klasse wirklich überschrieben, beim Überlagern (Shadowing) wird
+         * einfach eine zweite Version dieser Methode erstellt, die in einem geringeren Geltungsbereich (Scope) ist und
+         * daher die andere Methode nur überlagert.
+         * Es kann mit dem vollen Namen weiterhin auf die statische Methode zugegriffen werden (Oberklasse.Methode), während
+         * auf eine überschriebene Methode nur noch mit super.Methodenname() zugegriffen werden kann.
+         *
+         */
         Oberklasse o = new Unterklasse();
-        o.secondStaticMethod();
         o.staticMethod();
+
+
+        /*
+         * Gibt einen Fehler. Die Oberklasse implementiert zwar das Interface, welches diese Methode bietet, allerdings
+         * ist die Methode statisch. In Interfaces werden statische Methoden NICHT weiter vererbt.
+         */
+        // o.sayHello();
 
 
     }
